@@ -88,7 +88,7 @@ namespace iRacingReplayDirector
             switch (_states)
             {
                 case States.Idle:
-                    BeginProcessButton.Enabled = Directory.Exists(workingFolderTextBox.Text) && isConnected && trackCamerasDefined && (lastSession != null && lastSession.WeekendInfo.Category == "Road");
+                    BeginProcessButton.Enabled = Directory.Exists(workingFolderTextBox.Text) && isConnected && trackCamerasDefined && (lastSession != null && (lastSession.WeekendInfo.Category == "Road" || lastSession.WeekendInfo.Category == "Oval"));
                     configureTrackCamerasLabel.Visible = isConnected && !trackCamerasDefined;
                     transcodeVideoButton.Enabled = IsReadyForTranscoding();
                     transcodeCancelButton.Visible = false;
