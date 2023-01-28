@@ -59,7 +59,7 @@ namespace iRacingReplayDirector
         System.Windows.Forms.Timer lookForAudioBitRates;
         LogMessages logMessagges;
         const string DefaultLogFileName = "general.log";
-        SessionData lastSession;
+        SessionData curSession;
         bool isConnected;
 
         States State
@@ -79,11 +79,11 @@ namespace iRacingReplayDirector
         {
             var trackCamerasDefined =
                 Settings.Default.trackCameras != null &&
-                lastSession != null &&
-                Settings.Default.trackCameras.Any(tc => tc.TrackName == lastSession.WeekendInfo.TrackDisplayName) &&
-                Settings.Default.trackCameras.RaceStart[lastSession.WeekendInfo.TrackDisplayName] != null &&
-                Settings.Default.trackCameras.Incident[lastSession.WeekendInfo.TrackDisplayName] != null &&
-                Settings.Default.trackCameras.LastLap[lastSession.WeekendInfo.TrackDisplayName] != null;
+                curSession != null &&
+                Settings.Default.trackCameras.Any(tc => tc.TrackName == curSession.WeekendInfo.TrackDisplayName) &&
+                Settings.Default.trackCameras.RaceStart[curSession.WeekendInfo.TrackDisplayName] != null &&
+                Settings.Default.trackCameras.Incident[curSession.WeekendInfo.TrackDisplayName] != null &&
+                Settings.Default.trackCameras.LastLap[curSession.WeekendInfo.TrackDisplayName] != null;
 
             switch (_states)
             {
@@ -236,7 +236,7 @@ namespace iRacingReplayDirector
         private bool ReplaySessionTypeSupported()
         {
             //add here code to review whether replay does contain a supported session type
-            return (lastSession != null && (lastSession.WeekendInfo.Category == "Road" || lastSession.WeekendInfo.Category == "Oval"));  
+            return (curSession != null && (curSession.WeekendInfo.Category == "Road" || curSession.WeekendInfo.Category == "Oval"));  
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -332,7 +332,7 @@ namespace iRacingReplayDirector
 
         void iracingEvents_NewSessionData(DataSample data)
         {
-            lastSession = data.SessionData;
+            curSession = data.SessionData;
             StateUpdated();
         }
 
