@@ -53,6 +53,7 @@ namespace iRacingReplayDirector
             this.logMessagesButton = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCapture = new System.Windows.Forms.TabPage();
+            this.label_SupportedSession = new System.Windows.Forms.Label();
             this.cb_CloseiRacingAfterRecording = new System.Windows.Forms.CheckBox();
             this.cb_ShutdownAfterEncode = new System.Windows.Forms.CheckBox();
             this.cb_FastVideoRecording = new System.Windows.Forms.CheckBox();
@@ -87,7 +88,6 @@ namespace iRacingReplayDirector
             this.configurePluginsButton = new System.Windows.Forms.Button();
             this.newVersionMessage = new System.Windows.Forms.Label();
             this.cb_UseNewSettingsDlg = new System.Windows.Forms.CheckBox();
-            this.label_SupportedSession = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabCapture.SuspendLayout();
             this.tabTranscoding.SuspendLayout();
@@ -161,6 +161,17 @@ namespace iRacingReplayDirector
             this.tabCapture.TabIndex = 0;
             this.tabCapture.Text = "Race Capture";
             this.tabCapture.UseVisualStyleBackColor = true;
+            // 
+            // label_SupportedSession
+            // 
+            this.label_SupportedSession.ForeColor = System.Drawing.Color.DarkRed;
+            this.label_SupportedSession.Location = new System.Drawing.Point(3, 115);
+            this.label_SupportedSession.Name = "label_SupportedSession";
+            this.label_SupportedSession.Size = new System.Drawing.Size(597, 41);
+            this.label_SupportedSession.TabIndex = 19;
+            this.label_SupportedSession.Text = "WARNING: ReplayDirector just tested with replays from Road and Oval Race sessions" +
+    "";
+            this.label_SupportedSession.Visible = false;
             // 
             // cb_CloseiRacingAfterRecording
             // 
@@ -537,16 +548,6 @@ namespace iRacingReplayDirector
             this.cb_UseNewSettingsDlg.Text = "Use New Settings Dialog (alpha)";
             this.cb_UseNewSettingsDlg.UseVisualStyleBackColor = true;
             this.cb_UseNewSettingsDlg.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
-            // label_SupportedSession
-            // 
-            this.label_SupportedSession.ForeColor = System.Drawing.Color.DarkRed;
-            this.label_SupportedSession.Location = new System.Drawing.Point(3, 115);
-            this.label_SupportedSession.Name = "label_SupportedSession";
-            this.label_SupportedSession.Size = new System.Drawing.Size(547, 41);
-            this.label_SupportedSession.TabIndex = 19;
-            this.label_SupportedSession.Text = "Not supported replay session - just Road or Oval supported";
-            this.label_SupportedSession.Visible = false;
             // 
             // Main
             // 

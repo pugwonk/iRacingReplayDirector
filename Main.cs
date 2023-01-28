@@ -240,11 +240,12 @@ namespace iRacingReplayDirector
             {   
                 label_SupportedSession.Visible = false;     //ensure that message with regard to wrong session type isn't shown
             } else {
-                TraceInfo.WriteLineIf(!label_SupportedSession.Visible, "Not supported replay - just Oval or Road replays supported");
+                TraceInfo.WriteLineIf(!label_SupportedSession.Visible, "WARNING: ReplayDirector just tested with replays from Road and Oval Race sessions. You are able to use it with other replays as well - in case of issues report on GitHub ");
                 label_SupportedSession.Visible = true;      //otherwise make message box visible
 
             }
-            return !label_SupportedSession.Visible;          //and return the inverse result
+            //return !label_SupportedSession.Visible;       //and return the inverse result
+            returen true;                                   //always return true to allow people testing of all Session types. Some which do not work for sure will be excluded in the future    
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
