@@ -88,7 +88,7 @@ namespace iRacingReplayDirector
             switch (_states)
             {
                 case States.Idle:
-                    BeginProcessButton.Enabled = Directory.Exists(workingFolderTextBox.Text) && isConnected && trackCamerasDefined && (lastSession != null && (lastSession.WeekendInfo.Category == "Road" || lastSession.WeekendInfo.Category == "Oval"));
+                    BeginProcessButton.Enabled = Directory.Exists(workingFolderTextBox.Text) && isConnected && trackCamerasDefined && ReplaySessionTypeSupported();
                     configureTrackCamerasLabel.Visible = isConnected && !trackCamerasDefined;
                     transcodeVideoButton.Enabled = IsReadyForTranscoding();
                     transcodeCancelButton.Visible = false;
@@ -233,18 +233,10 @@ namespace iRacingReplayDirector
             
         }
 
-        private void TestForSupportedSessionType()
+        private bool ReplaySessionTypeSupported()
         {
             //add here code to review whether replay does contain a supported session type
-
-            //and only enable the "Begin Capture" Button if that is the case
-            if (iRacing.IsConnected /*&& ??? */)
-            {
-                var weekendInfo = lastSession.WeekendInfo;
-                //var data = iRacing.NewData();
-                BeginProcessButton.Enabled = true;
-            }
-            BeginProcessButton.Enabled = true;
+            return (lastSession != null && (lastSession.WeekendInfo.Category == "Road" || lastSession.WeekendInfo.Category == "Oval"));  
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
