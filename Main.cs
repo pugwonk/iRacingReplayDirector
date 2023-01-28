@@ -220,12 +220,29 @@ namespace iRacingReplayDirector
             iRacingProcess = new IRacingReplay()
                 .WhenIRacingStarts(() => 
                 {
-                    BeginProcessButton.Enabled = true;
+                    TestForSupportedSessionType();
                     workingFolderTextBox_TextChanged(null, null); 
-                    ProcessErrorMessageLabel.Visible = false; 
+                    ProcessErrorMessageLabel.Visible = false;
                     WaitingForIRacingLabel.Visible = false;
+
+                    
+                    
                 })
                 .InTheBackground(errorMessage => { });
+
+            
+        }
+
+        private void TestForSupportedSessionType()
+        {
+            //add here code to review whether replay does contain a supported session type
+
+            //and only enable the "Begin Capture" Button if that is the case
+            if (iRacing.IsConnected /*&& ??? */)
+            {
+                BeginProcessButton.Enabled = true;
+            }
+            BeginProcessButton.Enabled = true;
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
