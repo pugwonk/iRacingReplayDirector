@@ -245,7 +245,7 @@ namespace iRacingReplayDirector
 
             }
             //return !label_SupportedSession.Visible;       //and return the inverse result
-            returen true;                                   //always return true to allow people testing of all Session types. Some which do not work for sure will be excluded in the future    
+            return true;                                   //always return true to allow people testing of all Session types. Some which do not work for sure will be excluded in the future    
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
