@@ -236,7 +236,15 @@ namespace iRacingReplayDirector
         private bool ReplaySessionTypeSupported()
         {
             //add here code to review whether replay does contain a supported session type
-            return (curSession != null && (curSession.WeekendInfo.Category == "Road" || curSession.WeekendInfo.Category == "Oval"));  
+            if (curSession != null && (curSession.WeekendInfo.Category == "Road" || curSession.WeekendInfo.Category == "Oval"))
+            {   
+                label_SupportedSession.Visible = false;     //ensure that message with regard to wrong session type isn't shown
+            } else {
+                TraceInfo.WriteLineIf(!label_SupportedSession.Visible, "Not supported replay - just Oval or Road replays supported");
+                label_SupportedSession.Visible = true;      //otherwise make message box visible
+
+            }
+            return !label_SupportedSession.Visible;          //and return the inverse result
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -320,12 +328,16 @@ namespace iRacingReplayDirector
 
         void iracingEvents_Disconnected()
         {
-            isConnected = false;
+            TraceInfo.WriteLineIf(isConnected, "Disconnected from iRacing application");
+            isConnected = false;                        //disconnected from iRacing
+            curSession = null;                          //therefore Session data no longer valid
+            label_SupportedSession.Visible = false;     //and replay no hint about replay Session necessary
             StateUpdated();
         }
 
         void iracingEvents_Connected()
         {
+            TraceInfo.WriteLineIf(!isConnected, "Connected to iRacing application");
             isConnected = true;
             StateUpdated();
         }
