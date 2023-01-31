@@ -1,3 +1,8 @@
+| Release Weekly | CI/CD-Master | CI/CD Fast-Recording |
+| -------------------- | -------------------- | -------------------- |
+| ![Build status](https://dev.azure.com/MerlinCooper/iRacingReplayDirector/_apis/build/status/iRacingReplayDirector_Release_Weekly) | ![Build Status](https://dev.azure.com/MerlinCooper/iRacingReplayDirector/_apis/build/status/iRacingReplayDirector_Master?branchName=master) | ![Build Status](https://dev.azure.com/MerlinCooper/iRacingReplayDirector/_apis/build/status/iRacingReplayDirector_OBS%20Fast%20Record%20Branch%20(alpha)?branchName=Fast_Video_Recording_With_OBS) |
+
+
 iRacingReplayDirector
 =====================
 
@@ -68,15 +73,3 @@ As Vipoo no longer owns an active license for iRacing - nor has the time to comm
 For the ease of processing most of the development activites will be managed in the fork MerlinCooper/iRacingReplayDirector. 
 
 Based on Azure DevOps continous integration is setup for two branches "master" and "Fast_Video_Recording_With_OBS". Whereas the master branch is being used for changes/modifications within the current program structure and the "Fast_Recording_With_OBS" branch is taking a different approach to significantly reduce the time to create a highlight video from long replays. 
-
-Current CI/CD Status
---------------------
-Master Branch - latest Release   
-![Build Status](https://dev.azure.com/MerlinCooper/iRacingReplayDirector/_apis/build/status/iRacingReplayDirector_Master?branchName=master)
-
-Master Branch - CI (compile state)
-
-[![Build status](https://dev.azure.com/MerlinCooper/iRacingReplayDirector/_apis/build/status/iRacingReplayDirector_Master_CI_compile%20only)](https://dev.azure.com/MerlinCooper/iRacingReplayDirector/_build/latest?definitionId=8)
-
-Fast_Video_Recording_With_OBS   
-[![Build Status](https://dev.azure.com/MerlinCooper/iRacingReplayDirector/_apis/build/status/iRacingReplayDirector_OBS%20Fast%20Record%20Branch%20(alpha)?branchName=Fast_Video_Recording_With_OBS)](https://dev.azure.com/MerlinCooperDev/iRacingReplayDirector/_build/latest?definitionId=3&branchName=Fast_Video_Recording_With_OBS)
