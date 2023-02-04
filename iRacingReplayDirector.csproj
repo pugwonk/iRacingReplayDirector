@@ -330,12 +330,7 @@
     <Content Include="DeploymentSite\index.html" />
     <Content Include="DeploymentSite\xmltojson.js" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="iRacingSDK.Net\iRacingSDK.csproj">
-      <Project>{5422AE20-F220-4BE1-9E61-5296981ABB5C}</Project>
-      <Name>iRacingSDK</Name>
-    </ProjectReference>
-  </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="AWSSDK.CloudWatchLogs">
       <Version>3.1.2.2</Version>
@@ -351,6 +346,9 @@
     </PackageReference>
     <PackageReference Include="ILMerge">
       <Version>3.0.40</Version>
+    </PackageReference>
+    <PackageReference Include="iRacingSDK">
+      <Version>1.0.1.23</Version>
     </PackageReference>
     <PackageReference Include="MediaFoundation.Net">
       <Version>2.0.0.32</Version>
