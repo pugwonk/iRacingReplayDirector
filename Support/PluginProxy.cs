@@ -68,6 +68,7 @@ namespace iRacingReplayDirector
             TraceInfo.WriteLine("Trying to load overlay plugin:{0}", pluginName);
             var an = AssemblyName.GetAssemblyName(pluginName);
             var assembly = Assembly.Load(an);
+            TraceInfo.WriteLine("Plugin {0} succsesfully loaded", pluginName);
 
             pluginType = assembly.GetTypes()
                 .Where(t => !t.IsInterface)
