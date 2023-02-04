@@ -203,7 +203,7 @@ namespace iRacingReplayDirector
             Trace.Listeners.Add(new MyListener(logMessagges.TraceMessage));
 
             LogListener.ToFile(GetDefaultLogFileName());
-            AwsLogListener.SetPhaseGeneral();
+//            AwsLogListener.SetPhaseGeneral();
 
             new Task(LogSystemInformation).Start();
 
@@ -376,7 +376,7 @@ namespace iRacingReplayDirector
             SetTanscodeMessage(trancodingErrorMessage: null);
 
             LogListener.ToFile(Path.ChangeExtension(sourceVideoTextBox.Text, "log"));
-            AwsLogListener.SetPhaseTranscode();
+            //AwsLogListener.SetPhaseTranscode();
 
             NativeMethods.SetThreadExecutionState(NativeMethods.ES_CONTINUOUS | NativeMethods.ES_SYSTEM_REQUIRED);
 
@@ -389,7 +389,7 @@ namespace iRacingReplayDirector
                     OnTranscoderCompleted();
                     SetTanscodeMessage(trancodingErrorMessage: errorMessage);
                     LogListener.ToFile(GetDefaultLogFileName());
-                    AwsLogListener.SetPhaseGeneral();
+                    //AwsLogListener.SetPhaseGeneral();
                     NativeMethods.SetThreadExecutionState(NativeMethods.ES_CONTINUOUS);
                 });
         }
@@ -510,7 +510,7 @@ namespace iRacingReplayDirector
             State = States.CapturingGameData;
 
             LogListener.ToFile(workingFolderTextBox.Text + "\\capture.log");
-            AwsLogListener.SetPhaseCapture();
+            //AwsLogListener.SetPhaseCapture();
 
             NativeMethods.SetThreadExecutionState(NativeMethods.ES_CONTINUOUS | NativeMethods.ES_SYSTEM_REQUIRED | NativeMethods.ES_DISPLAY_REQUIRED);
 
@@ -537,7 +537,7 @@ namespace iRacingReplayDirector
                     StateUpdated();
 
                     LogListener.ToFile(GetDefaultLogFileName());
-                    AwsLogListener.SetPhaseGeneral();
+                    //AwsLogListener.SetPhaseGeneral();
 
                     WindowState = FormWindowState.Minimized;
                     Show();
@@ -605,8 +605,8 @@ namespace iRacingReplayDirector
 
         private void Main_Activated(object sender, EventArgs e)
         {
-            if (!AwsKeys.HaveKeys)
-                return;
+            /*if (!AwsKeys.HaveKeys)
+                return;*/
 
             if (!Settings.Default.HaveAskedAboutUsage)
             {
