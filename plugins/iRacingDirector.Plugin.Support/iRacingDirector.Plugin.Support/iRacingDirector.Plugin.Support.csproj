@@ -71,11 +71,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /r $(TargetPath) $(SolutionDir)$(OutDir)</PostBuildEvent>
+    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)$(OutDir)$(TargetFileName)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
+    <PreBuildEvent>del $(SolutionDir)$(OutDir)$(TargetFileName)</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
