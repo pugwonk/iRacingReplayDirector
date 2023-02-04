@@ -38,7 +38,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
     <Optimize>false</Optimize>
-    <OutputPath>bin\x64\Debug</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x64</PlatformTarget>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
@@ -52,7 +52,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
     <Optimize>false</Optimize>
-    <OutputPath>bin\x64\Release</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x64</PlatformTarget>
     <LangVersion>5</LangVersion>
@@ -330,7 +330,6 @@
     <Content Include="DeploymentSite\index.html" />
     <Content Include="DeploymentSite\xmltojson.js" />
   </ItemGroup>
-  
   <ItemGroup>
     <PackageReference Include="AWSSDK.CloudWatchLogs">
       <Version>3.1.2.2</Version>
