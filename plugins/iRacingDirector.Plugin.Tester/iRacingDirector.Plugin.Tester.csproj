@@ -97,9 +97,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="iRacingSDK">
-      <Version>1.0.0.43</Version>
-    </PackageReference>
     <PackageReference Include="YamlDotNet">
       <Version>12.3.1</Version>
     </PackageReference>
