@@ -1,9 +1,8 @@
-﻿using iRacingDirector;
+﻿using iRacingReplayDirector;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
-using iRacingReplayDirector;
 
 namespace iRacingDirector.Plugin.Tester
 {
@@ -62,11 +61,11 @@ namespace iRacingDirector.Plugin.Tester
 
             frm.SetFramesPerSecond(framesPerSecond);
             frm.SetOnError(onError);
-            
-            if(sessionDataPath != null)
+
+            if (sessionDataPath != null)
                 frm.SetSessionDataPath(sessionDataPath);
 
-            if( backgroundImage != null)
+            if (backgroundImage != null)
                 frm.SetBackgroundImage(backgroundImage);
             frm.ClientSize = clientSize;
             frm.SetPosition(left, top);

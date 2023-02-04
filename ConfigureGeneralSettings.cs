@@ -66,7 +66,7 @@ Larger values will cause the incident scanning phase to take longer.",
 
             f.AddIntField("Ignore Incident Below", @"Ignore any incidents below the specified position.", "IgnoreIncidentsBelowPosition");
 
-            f.AddCheckboxField("Ignore Incidents during race start", 
+            f.AddCheckboxField("Ignore Incidents during race start",
                 "If this option is select, then the camera will stay on the leader for during the race start, and will not following any incidents that happen in the field",
                 "IgnoreIncidentsDuringRaceStart");
 
@@ -113,7 +113,7 @@ The data is sent encypted to me - the developer - dean.netherton@gmail.com", "Se
         }
 
         void okButton_Click(object sender, EventArgs e)
-        {            
+        {
             this.onSave();
         }
 

@@ -22,7 +22,7 @@ namespace iRacingReplayDirector
     public class AwsLogListener : TraceListener
     {
         static string phase = "General";
-        
+
         static Timer timer;
         static readonly BlockingCollection<InputLogEvent> items = new BlockingCollection<InputLogEvent>(100);
         static string trackingId = Settings.Default.TrackingID;
@@ -50,7 +50,7 @@ namespace iRacingReplayDirector
             timer.Elapsed += Writer;
             timer.AutoReset = false;
             timer.Enabled = true;
-            
+
             Settings.Default.PropertyChanged += Default_PropertyChanged;
         }
 
@@ -116,13 +116,13 @@ namespace iRacingReplayDirector
                     }
                 }
             }
-            catch(Exception ee)
+            catch (Exception ee)
             {
                 AttempToRestoreErrors(logEvents, ee);
             }
             finally
             {
-                if(timer != null)
+                if (timer != null)
                     timer.Start();
             }
         }
@@ -136,7 +136,7 @@ namespace iRacingReplayDirector
                 foreach (var le in logEvents)
                     items.TryAdd(le);
             }
-            catch(Exception)
+            catch (Exception)
             {
             }
         }
