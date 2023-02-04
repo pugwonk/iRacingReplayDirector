@@ -13,7 +13,7 @@ namespace iRacingDirector.Plugin.Tester
         RemoteImageViewer frm;
         AppDomain domain;
 
-        string pluginPath;
+        string pluginPath = "";
         string sessionDataPath;
         private int framesPerSecond = 5;
         private Action<string, string> onError;
