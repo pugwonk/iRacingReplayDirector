@@ -603,20 +603,7 @@ namespace iRacingReplayDirector
             f.ShowDialog();
         }
 
-        private void Main_Activated(object sender, EventArgs e)
-        {
-            /*if (!AwsKeys.HaveKeys)
-                return;*/
-
-            if (!Settings.Default.HaveAskedAboutUsage)
-            {
-                Settings.Default.HaveAskedAboutUsage = true;
-                Settings.Default.Save();
-                (new UsageDataRequest()).ShowDialog();
-            }
-        }
-
-        private void changeVersionButton_Click(object sender, EventArgs e)
+       private void changeVersionButton_Click(object sender, EventArgs e)
         {
             Process.Start(Settings.Default.MainExecPath, "-update");
             this.Close();
