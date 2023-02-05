@@ -18,7 +18,7 @@ Here is an example of a full length video created by Replay Director:
 https://youtu.be/L8Kd0OqsEVg
 
 This is a highlight video:
-https://youtu.be/a1WaRx0R9KI
+https://youtu.be/a1WaRx0R9KI 
 
 Requirements
 --------------------
@@ -31,7 +31,7 @@ Requirements
 * Only supports MPEG/H.264 video codec for capture/conversion
 
 HOW TO USE
-==================
+==========
 
 1. The first time you use the software, you’ll want to verify it is talking to your Video Capture software correctly. 
 2. Open your Video Capture software
@@ -49,7 +49,7 @@ HOW TO USE
 14. If you’d like, you can now do a test run using the “Short Test Only” checkbox to verify everything is working. This is preferable to doing a 40 minute video and finding out something wasn’t setup correctly. Just follow the instructions below with the “Short Test Only” box checked.
 
 Creating a Video Thereafter
---------------------
+===========================
 1. Start iRacing with the replay you wish to convert. Make sure iRacing is running at an optimal resolution for video encoding. eg: 720p or 1080p.
 2. Press the space bar to remove iRacing’s overlay from the replay screen.
 3. Start your Video Capture software and verify it is ready to go.
