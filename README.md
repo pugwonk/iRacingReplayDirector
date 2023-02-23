@@ -20,7 +20,7 @@ This is a highlight video:
 https://youtu.be/a1WaRx0R9KI 
 
 Requirements
---------------------
+============
 * Video capture software (ie. OBS, Nvidia, etc.).
 * The program will use Alt-F9 for recording. Make sure your video capture software is also set to use that keystroke.
 * Set your video capture software to only record the iRacing replay window.
