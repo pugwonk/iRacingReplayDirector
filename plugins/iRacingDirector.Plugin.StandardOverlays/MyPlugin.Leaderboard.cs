@@ -7,7 +7,7 @@ namespace iRacingDirector.Plugin.StandardOverlays
     public partial class MyPlugin
     {
         public LeaderBoard LeaderBoard;
-        const int leaderBoardWidth = 189;
+        const int leaderBoardWidth = 340;
         const int headerFontSize = 12;
         const int fontSize = 16;
         const int offset = 4;
@@ -89,10 +89,10 @@ namespace iRacingDirector.Plugin.StandardOverlays
                     .WithFontSize(fontSize)
                     .DrawText(pitStopCount, topOffset: offset);
 
-                n.ToRight(width: 95)
+                n.ToRight(width: leaderBoardWidth - 94)
                     .WithFontSize(fontSize)
                     .WithStringFormat(StringAlignment.Near)
-                    .DrawText(d.ShortName.FormattedForLeaderboard(), leftOffset: 10, topOffset: offset)
+                    .DrawText(d.UserName, leftOffset: 10, topOffset: offset)
 
                     .WithPen(Styles.ThickBlackPen)
                     .DrawLine(r.Rectangle.Left, r.Rectangle.Top, r.Rectangle.Left + width - 16, n.Rectangle.Top);
