@@ -60,6 +60,9 @@
   <PropertyGroup Condition="Exists('.\..\..\packages')">
     <PackagesFolder>.\..\..\packages\</PackagesFolder>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />

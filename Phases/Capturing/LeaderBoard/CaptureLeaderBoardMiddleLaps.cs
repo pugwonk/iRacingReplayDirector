@@ -74,11 +74,18 @@ namespace iRacingReplayDirector.Phases.Capturing.LeaderBoard
                     var lastPosition = lastDrivers.FirstOrDefault(lp => lp.CarIdx == d.CarIdx);
                     if (lastPosition != null && lastPosition.Position != d.Position)
                     {
-                        var position = d.Position != null ? d.Position.Value.ToString() : "";
-                        var indicator = d.Position != null ? d.Position.Value.Ordinal() : "";
-                        var msg = "{0} in {1}{2}".F(d.UserName, position, indicator);
-                        TraceInfo.WriteLine("{0} {1}", data.Telemetry.SessionTimeSpan, msg);
-                        commentaryMessages.Add(msg, relativeTime.TotalSeconds);
+                        // Need to change this to say something like
+                        // X overtakes Y for 5th (0.5 behind Z)
+                        // This runs during the analysis part of the process
+                        if (lastPosition.Position > d.Position)
+                        {
+                            var personBehind = lastDrivers.FirstOrDefault(lp => lp.Position == d.Position);
+                            var position = d.Position != null ? d.Position.Value.ToString() : "";
+                            var indicator = d.Position != null ? d.Position.Value.Ordinal() : "";
+                            var msg = "{0} takes {1}{2} place from {3}".F(d.UserName, position, indicator, personBehind.UserName);
+                            TraceInfo.WriteLine("{0} {1}", data.Telemetry.SessionTimeSpan, msg);
+                            commentaryMessages.Add(msg, relativeTime.TotalSeconds);
+                        }
                     }
                 }
 

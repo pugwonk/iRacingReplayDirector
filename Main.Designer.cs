@@ -154,10 +154,10 @@ namespace iRacingReplayDirector
             this.tabCapture.Controls.Add(this.workingFolderButton);
             this.tabCapture.Controls.Add(this.label5);
             this.tabCapture.Controls.Add(this.workingFolderTextBox);
-            this.tabCapture.Location = new System.Drawing.Point(4, 31);
+            this.tabCapture.Location = new System.Drawing.Point(4, 36);
             this.tabCapture.Name = "tabCapture";
             this.tabCapture.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCapture.Size = new System.Drawing.Size(746, 304);
+            this.tabCapture.Size = new System.Drawing.Size(746, 299);
             this.tabCapture.TabIndex = 0;
             this.tabCapture.Text = "Race Capture";
             this.tabCapture.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@ namespace iRacingReplayDirector
             this.cb_CloseiRacingAfterRecording.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::iRacingReplayDirector.Properties.Settings.Default, "bCloseiRacingAfterRecording", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cb_CloseiRacingAfterRecording.Location = new System.Drawing.Point(516, 29);
             this.cb_CloseiRacingAfterRecording.Name = "cb_CloseiRacingAfterRecording";
-            this.cb_CloseiRacingAfterRecording.Size = new System.Drawing.Size(220, 23);
+            this.cb_CloseiRacingAfterRecording.Size = new System.Drawing.Size(273, 28);
             this.cb_CloseiRacingAfterRecording.TabIndex = 8;
             this.cb_CloseiRacingAfterRecording.Text = "Close iRacing after Recording";
             this.cb_CloseiRacingAfterRecording.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@ namespace iRacingReplayDirector
             this.cb_ShutdownAfterEncode.Checked = global::iRacingReplayDirector.Properties.Settings.Default.bShutdownPCAfterEncoding;
             this.cb_ShutdownAfterEncode.Location = new System.Drawing.Point(516, 58);
             this.cb_ShutdownAfterEncode.Name = "cb_ShutdownAfterEncode";
-            this.cb_ShutdownAfterEncode.Size = new System.Drawing.Size(210, 23);
+            this.cb_ShutdownAfterEncode.Size = new System.Drawing.Size(268, 28);
             this.cb_ShutdownAfterEncode.TabIndex = 8;
             this.cb_ShutdownAfterEncode.Text = "Shutdown PC after Encoding";
             this.cb_ShutdownAfterEncode.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@ namespace iRacingReplayDirector
             this.cb_FastVideoRecording.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::iRacingReplayDirector.Properties.Settings.Default, "bFastVideoRecording", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cb_FastVideoRecording.Location = new System.Drawing.Point(300, 58);
             this.cb_FastVideoRecording.Name = "cb_FastVideoRecording";
-            this.cb_FastVideoRecording.Size = new System.Drawing.Size(217, 23);
+            this.cb_FastVideoRecording.Size = new System.Drawing.Size(271, 28);
             this.cb_FastVideoRecording.TabIndex = 8;
             this.cb_FastVideoRecording.Text = "Fast-Video-Recording (alpha)";
             this.cb_FastVideoRecording.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@ namespace iRacingReplayDirector
             this.cb_EncodeVideoAfterCapture.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::iRacingReplayDirector.Properties.Settings.Default, "bEncodeVideoAfterCapture", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cb_EncodeVideoAfterCapture.Location = new System.Drawing.Point(300, 29);
             this.cb_EncodeVideoAfterCapture.Name = "cb_EncodeVideoAfterCapture";
-            this.cb_EncodeVideoAfterCapture.Size = new System.Drawing.Size(207, 23);
+            this.cb_EncodeVideoAfterCapture.Size = new System.Drawing.Size(264, 28);
             this.cb_EncodeVideoAfterCapture.TabIndex = 8;
             this.cb_EncodeVideoAfterCapture.Text = "Encode Video After Capture";
             this.cb_EncodeVideoAfterCapture.UseVisualStyleBackColor = true;
@@ -256,7 +256,7 @@ namespace iRacingReplayDirector
             this.cb_ShortTestOnly.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::iRacingReplayDirector.Properties.Settings.Default, "bShortTestOnly", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cb_ShortTestOnly.Location = new System.Drawing.Point(174, 29);
             this.cb_ShortTestOnly.Name = "cb_ShortTestOnly";
-            this.cb_ShortTestOnly.Size = new System.Drawing.Size(126, 23);
+            this.cb_ShortTestOnly.Size = new System.Drawing.Size(158, 28);
             this.cb_ShortTestOnly.TabIndex = 7;
             this.cb_ShortTestOnly.Text = "Short Test Only";
             this.cb_ShortTestOnly.UseVisualStyleBackColor = true;
@@ -337,7 +337,7 @@ namespace iRacingReplayDirector
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 185);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 19);
+            this.label5.Size = new System.Drawing.Size(193, 24);
             this.label5.TabIndex = 14;
             this.label5.Text = "Video Capture Folder:";
             // 
@@ -345,7 +345,7 @@ namespace iRacingReplayDirector
             // 
             this.workingFolderTextBox.Location = new System.Drawing.Point(156, 182);
             this.workingFolderTextBox.Name = "workingFolderTextBox";
-            this.workingFolderTextBox.Size = new System.Drawing.Size(355, 27);
+            this.workingFolderTextBox.Size = new System.Drawing.Size(355, 32);
             this.workingFolderTextBox.TabIndex = 15;
             this.workingFolderTextBox.TextChanged += new System.EventHandler(this.workingFolderTextBox_TextChanged);
             // 
@@ -362,10 +362,10 @@ namespace iRacingReplayDirector
             this.tabTranscoding.Controls.Add(this.sourceVideoTextBox);
             this.tabTranscoding.Controls.Add(this.transcodeCancelButton);
             this.tabTranscoding.Controls.Add(this.transcodeVideoButton);
-            this.tabTranscoding.Location = new System.Drawing.Point(4, 31);
+            this.tabTranscoding.Location = new System.Drawing.Point(4, 36);
             this.tabTranscoding.Name = "tabTranscoding";
             this.tabTranscoding.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTranscoding.Size = new System.Drawing.Size(746, 304);
+            this.tabTranscoding.Size = new System.Drawing.Size(746, 299);
             this.tabTranscoding.TabIndex = 1;
             this.tabTranscoding.Text = "Video Encoding";
             this.tabTranscoding.UseVisualStyleBackColor = true;
@@ -400,7 +400,7 @@ namespace iRacingReplayDirector
             this.cb_HighLightVideoOnly.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::iRacingReplayDirector.Properties.Settings.Default, "bHighLightVideoOnly", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cb_HighLightVideoOnly.Location = new System.Drawing.Point(429, 55);
             this.cb_HighLightVideoOnly.Name = "cb_HighLightVideoOnly";
-            this.cb_HighLightVideoOnly.Size = new System.Drawing.Size(162, 23);
+            this.cb_HighLightVideoOnly.Size = new System.Drawing.Size(202, 28);
             this.cb_HighLightVideoOnly.TabIndex = 25;
             this.cb_HighLightVideoOnly.Text = "Highlight Video Only";
             this.cb_HighLightVideoOnly.UseVisualStyleBackColor = true;
@@ -417,7 +417,7 @@ namespace iRacingReplayDirector
             // 
             this.videoBitRate.Location = new System.Drawing.Point(565, 21);
             this.videoBitRate.Name = "videoBitRate";
-            this.videoBitRate.Size = new System.Drawing.Size(43, 27);
+            this.videoBitRate.Size = new System.Drawing.Size(43, 32);
             this.videoBitRate.TabIndex = 22;
             this.videoBitRate.Text = "15";
             this.videoBitRate.TextChanged += new System.EventHandler(this.videoBitRate_TextChanged);
@@ -427,7 +427,7 @@ namespace iRacingReplayDirector
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(426, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 19);
+            this.label1.Size = new System.Drawing.Size(178, 24);
             this.label1.TabIndex = 21;
             this.label1.Text = "Video Bitrate (Mbs):";
             // 
@@ -446,7 +446,7 @@ namespace iRacingReplayDirector
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(4, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.Size = new System.Drawing.Size(143, 24);
             this.label3.TabIndex = 26;
             this.label3.Text = "Replay Capture:";
             // 
@@ -454,7 +454,7 @@ namespace iRacingReplayDirector
             // 
             this.sourceVideoTextBox.Location = new System.Drawing.Point(116, 135);
             this.sourceVideoTextBox.Name = "sourceVideoTextBox";
-            this.sourceVideoTextBox.Size = new System.Drawing.Size(552, 27);
+            this.sourceVideoTextBox.Size = new System.Drawing.Size(552, 32);
             this.sourceVideoTextBox.TabIndex = 27;
             this.sourceVideoTextBox.TextChanged += new System.EventHandler(this.sourceVideoTextBox_TextChanged);
             // 
@@ -521,7 +521,6 @@ namespace iRacingReplayDirector
             this.configurePluginsButton.TabIndex = 38;
             this.configurePluginsButton.Text = "Configure Plugins";
             this.configurePluginsButton.UseVisualStyleBackColor = true;
-            this.configurePluginsButton.Visible = false;
             this.configurePluginsButton.Click += new System.EventHandler(this.configurePluginsButton_Click);
             // 
             // newVersionMessage
@@ -531,7 +530,7 @@ namespace iRacingReplayDirector
             this.newVersionMessage.ForeColor = System.Drawing.Color.DarkRed;
             this.newVersionMessage.Location = new System.Drawing.Point(466, 51);
             this.newVersionMessage.Name = "newVersionMessage";
-            this.newVersionMessage.Size = new System.Drawing.Size(161, 18);
+            this.newVersionMessage.Size = new System.Drawing.Size(205, 23);
             this.newVersionMessage.TabIndex = 39;
             this.newVersionMessage.Text = "New Version available ->";
             this.newVersionMessage.Visible = false;
@@ -543,7 +542,7 @@ namespace iRacingReplayDirector
             this.cb_UseNewSettingsDlg.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::iRacingReplayDirector.Properties.Settings.Default, "bUseNewSettingsDialog", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.cb_UseNewSettingsDlg.Location = new System.Drawing.Point(17, 46);
             this.cb_UseNewSettingsDlg.Name = "cb_UseNewSettingsDlg";
-            this.cb_UseNewSettingsDlg.Size = new System.Drawing.Size(238, 23);
+            this.cb_UseNewSettingsDlg.Size = new System.Drawing.Size(295, 28);
             this.cb_UseNewSettingsDlg.TabIndex = 40;
             this.cb_UseNewSettingsDlg.Text = "Use New Settings Dialog (alpha)";
             this.cb_UseNewSettingsDlg.UseVisualStyleBackColor = true;
@@ -551,7 +550,7 @@ namespace iRacingReplayDirector
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 424);
             this.Controls.Add(this.cb_UseNewSettingsDlg);

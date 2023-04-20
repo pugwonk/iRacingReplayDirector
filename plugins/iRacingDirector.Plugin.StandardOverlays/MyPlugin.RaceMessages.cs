@@ -6,6 +6,7 @@ namespace iRacingDirector.Plugin.StandardOverlays
     public partial class MyPlugin
     {
         public MessageSet MessageSet;
+        const int messagesWidth = 850;
 
         void DrawRaceMessages(double timeInSeconds)
         {
@@ -20,9 +21,9 @@ namespace iRacingDirector.Plugin.StandardOverlays
             var row4Top = 900 + 34 * 3;
             offset = row4Top - offset;
 
-            var r = Graphics.InRectangle(80, offset, 450, 34);
+            var r = Graphics.InRectangle(80, offset, messagesWidth, 34);
 
-            Graphics.SetClip(new Rectangle(80, 900, 450, 34 + 34 + 34));
+            Graphics.SetClip(new Rectangle(80, 900, messagesWidth, 34 + 34 + 34));
 
             foreach (var msg in MessageSet.Messages)
                 r = r.WithBrush(Styles.TransparentLighterGray)

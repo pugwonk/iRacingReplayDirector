@@ -14,7 +14,7 @@ namespace iRacingDirector.Plugin.StandardOverlays
 
             var offset = 5;
 
-            Graphics.InRectangle(1920 / 2 - 440 / 2, 980, 70, 40)
+            Graphics.InRectangle(80, 840, 140, 40)
                 .WithBrush(Styles.YellowBrush)
                 .WithPen(Styles.BlackPen)
                 .DrawRectangleWithBorder()
@@ -36,7 +36,7 @@ namespace iRacingDirector.Plugin.StandardOverlays
                 .WithBrush(Styles.BlackBrush)
                 .DrawText(CamDriver.CarNumber, topOffset: offset)
 
-                .ToRight(width: 300)
+                .ToRight(width: 400)
                 .WithLinearGradientBrush(Styles.White, Styles.WhiteSmoke, LinearGradientMode.BackwardDiagonal)
                 .DrawRectangleWithBorder()
                 .WithStringFormat(StringAlignment.Center)
